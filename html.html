@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+
+    <div class="container">
+      <div class="heeader">
+        <div class="map">
+           <a id="newTask" onclick="showInput()">New task</a>
+        </div>
+        <div class="new">
+          <input type="text" id="task" name="task">
+        </div>
+         
+
+      </div>
+
+      <div class="tasks">
+        <div class="task">
+          <div class="firstRow">
+              <input type="checkbox" class="done" name = "done">
+              <label for="done" class="doneLabel">Finish this project.</label>
+          
+          </div>
+          <div class="secondRow">
+            <a id="edit">Edit</a>
+            <a id="update" type="button">Update</a>
+            <a id="delete" type="button">Delete</a>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+    <script src="index.js" defer></script>
+    
+</html>
