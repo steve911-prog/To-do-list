@@ -11,6 +11,8 @@ function addTask() {
             <div class="label"><h2 class="label">NEW TASK</h2></div>
             <div class="delete"><i class="fa-solid fa-xmark"></i></i></div>`;
   tasks.appendChild(task);
+
+  title.value = '';
 }
 
 function doneTask(num, event) {
