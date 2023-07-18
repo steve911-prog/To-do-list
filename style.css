@@ -73,6 +73,48 @@ body {
   
 }
 
+/* F */
+/* I  */
+/* L */
+/* T */
+/* E */
+/* R */
+
+#filter{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  /* flex-flow: row nowrap; */
+  justify-content: center;
+  margin: 0 10%;
+  width: 94%;
+  background: #000;
+}
+
+#filterForCompletedTasks{
+  display: flex;  
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 2% 3%;
+  /* border-radius: 10px; */
+  /* border: #000 solid 1px; */
+  background-color: rgb(94, 252, 94);
+}
+
+
+
+#filterForNotCompletedTasks{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+  padding: 2% 3%;
+  /* border-radius: 10px; */
+  /* border: #000 solid 1px; */
+  background-color: rgb(255, 129, 129);
+}
+
+
 
 
 /* T */
@@ -147,6 +189,7 @@ body {
   margin: 2% 0 3% 2%;
 
 } */
+
 
 
 

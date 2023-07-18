@@ -21,6 +21,13 @@
           <input type="text" id="taskTitle" placeholder="Title...">
           <a id="addTaskButton" onclick="addTask()">Add</a>
           </div>
+          <div id="filter">
+              <a href="" id="filterForCompletedTasks">Completed <i class="fa-solid fa-check fa-xl"></i></a>
+              <a href="" id="filterForNotCompletedTasks">Not done <i class="fa-solid fa-xmark fa-xl"></i></a>
+          </div>
+
+
+
          </div>
        </div>
 
@@ -28,12 +35,12 @@
         <div class="task gray one">
             <div class="check" onclick="doneTask('one')"><i class="fa-solid fa-check fa-xl"></i></div>
             <div class="label"><h2 class="label">Finish this project</h2></div>
-            <div class="delete"><i class="fa-solid fa-xmark"></i></i></div>
+            <div class="delete" onclick="deleteTask('one')"><i class="fa-solid fa-xmark"></i></div>
       </div>
         <div class="task white two">
             <div class="check" onclick="doneTask('two')"><i class="fa-solid fa-check fa-xl"></i></div>
             <div class="label"><h2 class="label">Finish this project</h2></div>
-            <div class="delete"><i class="fa-solid fa-xmark"></i></i></div>
+            <div class="delete" onclick="deleteTask('two')"><i class="fa-solid fa-xmark"></i></div>
       </div>
 
       
