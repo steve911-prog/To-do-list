@@ -101,8 +101,9 @@ function filter(howFilter) {
 
   for (i = 0; i < tasks.children.length; i++) {
     let className = tasks.children[i].className;
-    let task = document.querySelector(`${task.children[i]}`);
-    console.log(task); //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished
+    console.log(tasks.children[i]);
+    let task = document.querySelector(`${tasks.children[i]}`);
+     //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished
 
     //if the task is completed
     if (className.includes("Done")) {
