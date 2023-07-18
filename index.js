@@ -55,15 +55,23 @@ function addTask() {
 function doneTask(num) {
   // console.log("Clicked element: ");
   let tasks = document.querySelector(".tasks");
+  let task = document.querySelector(`.${num}`);
   let check = document.querySelector(`.${num} .check`);
   // console.log(check.textContent);
   let checkI = document.querySelector(`.${num} .check i`);
 
-  if (checkI.style.display === "block") {
+  if (checkI.style.display === "flex") {
     checkI.style.display = "none";
+    task.classList.remove("Done"); //ITS VERY IMPORTANT! /ITS VERY IMPORTANT! /ITS VERY IMPORTANT! /ITS VERY IMPORTANT! /ITS VERY IMPORTANT! /ITS VERY IMPORTANT! /ITS VERY IMPORTANT! /ITS VERY IMPORTANT!
+    console.log(task.className);
   } else {
-    checkI.style.display = "block";
+    checkI.style.display = "flex";
+    task.classList.add("Done");
+    console.log(task.className);
   }
+
+ 
+  
 
   // for(let i = 0; i < tasks.childNodes; i++){
   //     console.log(tasks.childNodes[i]);
@@ -79,9 +87,6 @@ function doneTask(num) {
   //     }
   // };
 
-
-
-
 };
 
 function deleteTask(num){
@@ -94,3 +99,19 @@ function deleteTask(num){
 
 
 }
+
+function filter(howFilter){
+  let tasks = document.querySelector(".tasks");
+
+  for(i = 0; i < tasks.children.length; i++){
+      let className = tasks.children[i].className;
+      console.log(className);
+      if (className.includes("Done")) {
+        console.log("done :()");
+      } else {
+         console.log("not Done");
+      }
+  }
+
+
+};
