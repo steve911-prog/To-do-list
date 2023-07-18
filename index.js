@@ -37,28 +37,30 @@ function addTask() {
     return;
   }
   let task = document.createElement("div");
-  task.setAttribute("class", `task gray ${numbersToWords[tasks.childElementCount + 1]}`);
+  task.setAttribute("class", `task gray `);
+  task.setAttribute("id", `${numbersToWords[tasks.childElementCount + 1]}`);
   task.innerHTML = ` <div class="check" onclick = 'doneTask("${
     numbersToWords[tasks.childElementCount + 1]
   }")'><i class="fa-solid fa-check fa-xl"></i></div>
             <div class="label"><h2 class="label">${title.value}</h2></div>
-            <div class="delete" onclick="deleteTask('${numbersToWords[tasks.childElementCount + 1]}')"><i class="fa-solid fa-xmark"></i></i></div>`;
-  
+            <div class="delete" onclick="deleteTask('${
+              numbersToWords[tasks.childElementCount + 1]
+            }')"><i class="fa-solid fa-xmark"></i></i></div>`;
+
   console.log(tasks.childElementCount);
   tasks.appendChild(task);
   console.log(tasks.childElementCount);
 
   title.value = "";
-  
 }
 
 function doneTask(num) {
   // console.log("Clicked element: ");
   let tasks = document.querySelector(".tasks");
-  let task = document.querySelector(`.${num}`);
-  let check = document.querySelector(`.${num} .check`);
+  let task = document.querySelector(`#${num}`);
+  let check = document.querySelector(`#${num} .check`);
   // console.log(check.textContent);
-  let checkI = document.querySelector(`.${num} .check i`);
+  let checkI = document.querySelector(`#${num} .check i`);
 
   if (checkI.style.display === "flex") {
     checkI.style.display = "none";
@@ -69,9 +71,6 @@ function doneTask(num) {
     task.classList.add("Done");
     console.log(task.className);
   }
-
- 
-  
 
   // for(let i = 0; i < tasks.childNodes; i++){
   //     console.log(tasks.childNodes[i]);
@@ -86,32 +85,30 @@ function doneTask(num) {
   //       }
   //     }
   // };
+}
 
-};
-
-function deleteTask(num){
-  console.log('Function is working :)' , num);
+function deleteTask(num) {
+  console.log("Function is working :)", num);
   let tasks = document.querySelector(".tasks");
-  let child = document.querySelector(`.${num}`);
+  let child = document.querySelector(`#${num}`);
 
   tasks.removeChild(child);
   console.log(tasks.childElementCount);
-
-
 }
 
-function filter(howFilter){
+function filter(howFilter) {
   let tasks = document.querySelector(".tasks");
 
-  for(i = 0; i < tasks.children.length; i++){
-      let className = tasks.children[i].className;
-      console.log(className);
-      if (className.includes("Done")) {
-        console.log("done :()");
-      } else {
-         console.log("not Done");
-      }
+  for (i = 0; i < tasks.children.length; i++) {
+    let className = tasks.children[i].className;
+    let task = document.querySelector(`${task.children[i]}`);
+    console.log(task); //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished
+
+    //if the task is completed
+    if (className.includes("Done")) {
+      console.log("done :()");
+    } else {
+      console.log("not Done");
+    }
   }
-
-
-};
+}
