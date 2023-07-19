@@ -99,17 +99,42 @@ function deleteTask(num) {
 function filter(howFilter) {
   let tasks = document.querySelector(".tasks");
 
-  for (i = 0; i < tasks.children.length; i++) {
-    let className = tasks.children[i].className;
-    console.log(tasks.children[i]);
-    let task = document.querySelector(`${tasks.children[i]}`);
-     //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished //Not Finished
 
-    //if the task is completed
+  if (howFilter==="notDone") {
+      for (i = 0; i < tasks.children.length; i++) {
+        let className = tasks.children[i].className;
+        let id = tasks.children[i].id;
+        let task = document.querySelector(`.tasks #${id}`);
+
+        
+      }
+  } else if(howFilter ==="Done"){
+    
+  }else if(howFilter==="All"){
+
+  }
+
+
+
+
+  function done(className, task){
     if (className.includes("Done")) {
-      console.log("done :()");
+      console.log(task.textContent);
+      task.style.display = "flex";
     } else {
-      console.log("not Done");
+      task.style.display = "none";
+    }
+
+  }
+
+  function notDone(className, task){
+    if (className.includes("notDone")) {
+        console.log(task.textContent);
+        task.style.display = "flex";
+
+    } else {
+      task.style.display = "none";
     }
   }
+
 }
