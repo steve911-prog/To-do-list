@@ -106,9 +106,19 @@ function filter(howFilter) {
         let id = tasks.children[i].id;
         let task = document.querySelector(`.tasks #${id}`);
 
-        
+        notDone(className, task);
+
+
       }
   } else if(howFilter ==="Done"){
+    for (i = 0; i < tasks.children.length; i++) {
+      let className = tasks.children[i].className;
+      let id = tasks.children[i].id;
+      let task = document.querySelector(`.tasks #${id}`);
+
+      done(className, task);
+    }
+
     
   }else if(howFilter==="All"){
 
@@ -120,7 +130,7 @@ function filter(howFilter) {
   function done(className, task){
     if (className.includes("Done")) {
       console.log(task.textContent);
-      task.style.display = "flex";
+      task.style.display = "grid";
     } else {
       task.style.display = "none";
     }
@@ -128,12 +138,12 @@ function filter(howFilter) {
   }
 
   function notDone(className, task){
-    if (className.includes("notDone")) {
+    if (className.includes("Done")) {
         console.log(task.textContent);
-        task.style.display = "flex";
+        task.style.display = "none";
 
     } else {
-      task.style.display = "none";
+      task.style.display = "grid";
     }
   }
 
