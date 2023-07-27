@@ -82,7 +82,7 @@ body {
 
 #filter{
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 33.333% 33.333% 33.333%;
   /* flex-flow: row nowrap; */
   justify-content: center;
   margin: 0 10%;
@@ -124,6 +124,25 @@ body {
 #filterForCompletedTasks i{
     margin: 1%;
     color: green;
+
+}
+
+#filterForAllTasks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 22px;
+  color: #000;
+  padding: 2% 3%;
+  /* border-radius: 10px; */
+  /* border: #000 solid 1px; */
+  background-color: rgb(255, 129, 129);
+}
+
+#filterForAllTasks i{
+    margin: 1%;
+    /* color: green; */
 
 }
 

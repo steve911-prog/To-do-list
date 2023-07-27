@@ -121,7 +121,13 @@ function filter(howFilter) {
 
     
   }else if(howFilter==="All"){
+    for (i = 0; i < tasks.children.length; i++) {
+      let className = tasks.children[i].className;
+      let id = tasks.children[i].id;
+      let task = document.querySelector(`.tasks #${id}`);
 
+      task.style.display = "grid";
+    }
   }
 
 
